@@ -374,7 +374,7 @@
 
 ###############################
 # HASHING MAIN CODE:
-#ye number ke liye hoga bro:
+# ye number ke liye hoga bro:
 #
 # def prehash(arr):
 #     max = 0
@@ -469,7 +469,7 @@
 #
 #
 ####################################################################
-                                           ##SHORTING TECHNIC::::
+##SHORTING TECHNIC::::
 #####################################################################
 ############***SELECTION SORT ####################:::
 #
@@ -532,7 +532,7 @@
 # bubble(arr)
 # print(arr)
 
-#@###@@@@@ Note if array is already sorted than it means O(1) eske liye 1st iteartion me koi swap nhi hoga  wha break ker do bus !!!
+# @###@@@@@ Note if array is already sorted than it means O(1) eske liye 1st iteartion me koi swap nhi hoga  wha break ker do bus !!!
 # ##########################  INSERTION SORT#################
 
 # def swap(t,y,arr):
@@ -702,24 +702,24 @@
 # 	# Pointer for greater element
 # 	i = low - 1
 # 	#
-	# # Traverse through all elements
-	# # compare each element with pivot
-	# for j in range(low, high):
-	# 	if array[j] <= pivot:
-	#
-	# 		# If element smaller than pivot is found
-	# 		# swap it with the greater element pointed by i
-	# 		i = i + 1
-	#
-	# 		# Swapping element at i with element at j
-	# 		(array[i], array[j]) = (array[j], array[i])
-	#
-	# # Swap the pivot element with
-	# # the greater element specified by i
-	# (array[i + 1], array[high]) = (array[high], array[i + 1])
-	#
-	# # Return the position from where partition is done
-	# return i + 1
+# # Traverse through all elements
+# # compare each element with pivot
+# for j in range(low, high):
+# 	if array[j] <= pivot:
+#
+# 		# If element smaller than pivot is found
+# 		# swap it with the greater element pointed by i
+# 		i = i + 1
+#
+# 		# Swapping element at i with element at j
+# 		(array[i], array[j]) = (array[j], array[i])
+#
+# # Swap the pivot element with
+# # the greater element specified by i
+# (array[i + 1], array[high]) = (array[high], array[i + 1])
+#
+# # Return the position from where partition is done
+# return i + 1
 
 
 # Function to perform quicksort
@@ -829,8 +829,129 @@
 # arr=[2,23,89,23,3,4,5,3,12]
 # print("intial array:",arr)
 # print(dtimerotate(arr,len(arr),int(input("how many time do u want to left rotate the array:"))))
+
+
+#######################################################################
+# def swap(t, y):
+#     # using 3 variable swap ker rhe ho :::::
+#     # c=a[t]
+#     # a[t]=a[y]
+#     # a[y]=c
+#     # return ---> eski jarurat hai nhi hai
+#     # using 2 variable swap kiya hai :::::
+#     arr[t] = arr[t] + arr[y]
+#     arr[y] = arr[t] - arr[y]
+#     arr[t] = arr[t] - arr[y]
+# # def all0atlast(arr):
+# #     j=len(arr)-1
+#     for i in range(len(arr)):
+#         if arr[i]==0 and i<j:
+#             while arr[j]==0:
+#                 j-=1
+#             swap(j,i)
+#     return arr
+#
+# arr=[2,0,3,0,5,0,6,0,8,0,99,0,90,99,0,45,40,0,0,5,0,3,0,2,0]
+# print(all0atlast(arr))
+
+########## Linear search  ###############################
+
+# def Liearsearch(arr,n):
+#     for i in range(len(arr)):
+#         if arr[i] == n:
+#             return i
+#     return -1
+#
+# arr=[2,3,1,4,5,6,0]
+# k=Liearsearch(arr,5)
+# if k==-1:
+#     print("No not exist")
+# else:
+#     print("index of u r value:",k)
+
+#############################################################
+######### union of array##############
+
+# def unionarr(arr,brr):
+#     for i in brr:
+#         if i not in arr:
+#             arr.append(i)
+#     return arr
+#
+# arr=[2,4,6,8,0,12]
+# brr=[4,56,6,7,0,12]
+# print(unionarr(arr,brr))
+
+########################################################
+#### For this question I can think in 2 approach :::
+###APPROACH1:
+# def Missingele(arr,N):
+#     for i in range(1,N-1):
+#         if i == arr[i-1]:
+#             pass
+#         else:
+#             return i
 #
 #
-# ############################################################
+# arr=[1,2,3,4,5,6,7,9,10]
+# N = len(arr)+1
+# print(Missingele(arr,N))
+
+###APPROACH2 : optimal solution
+# def Missingele(arr,N):
+#     s1=N*(N+1)//2
+#     s2=0
+#     for i in arr:
+#         s2+=i
+#     return s1-s2
+#
+# arr=[1,2,3,4,5,6,7,8,9,11]
+# N = len(arr)+1
+# print(Missingele(arr,N))
+
+########################################################
+
+###Count Maximum Consecutive One’s in the array
+
+
+# def max_conse(arr):
+#     count1=0
+#     count2 = 0
+#     for i in arr:
+#         if i == 1:
+#             count1 += 1
+#         elif i == 0 and count1 > count2:
+#             count2 = count1
+#             count1=0
+#     if count1 > count2:
+#         count2 = count1
+#     return count2
+#
+#
+# arr = [1, 0, 1, 1, 0, 0, 1, 1, 1,1,1,1,1,1,0]
+# print("max consecutive one's in array", max_conse(arr))
+
+###############################################################
+
+## find the no which will appear once in array
+# in this way I can able to think in hashing way only :::
+#-> find max -> max+1 array -> no add+1
+
+
+# arr=[1,2,2,3,3,5,5,6,6,7,8]
+# y=max(arr)
+# hash=[0 for i in range(y+1)]
+# for i in arr:
+#     hash[i]+=1
+# for i in range(len(hash)):
+#     if hash[i]==1:
+#         print(i,end=' ')
+#
+
+##################################################
+
+
+
+
 
 
