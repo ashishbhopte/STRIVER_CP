@@ -935,7 +935,7 @@
 
 ## find the no which will appear once in array
 # in this way I can able to think in hashing way only :::
-#-> find max -> max+1 array -> no add+1
+# -> find max -> max+1 array -> no add+1
 
 
 # arr=[1,2,2,3,3,5,5,6,6,7,8]
@@ -949,6 +949,41 @@
 #
 
 ##################################################
+# Longest subarray with given sum (k)
+def lenOfLongSubarr(arr, N, K):
+
+	maxlength = 0
+
+	for i in range(0,N):
+
+		# Variable to store sum of subarrays
+		Sum = 0
+
+		for j in range(i,N):
+
+			# Storing sum of subarrays
+			Sum += arr[j]
+
+			# if Sum equals K
+			if (Sum == K):
+
+				# Update maxLength
+				maxlength = max(maxlength, j - i + 1)
+
+	# Return the maximum length
+	return maxlength
+
+# Driver Code
+# Given input
+arr = [ 10, 5, 2, 7, 1, 9 ,0,0,0,0,0,0,0,15]
+n = len(arr)
+k = 15
+
+# Function Call
+print("Length = " , lenOfLongSubarr(arr, n, k))
+
+####################################################
+
 
 
 
