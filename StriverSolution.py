@@ -950,39 +950,68 @@
 
 ##################################################
 # Longest subarray with given sum (k)
-def lenOfLongSubarr(arr, N, K):
-
-	maxlength = 0
-
-	for i in range(0,N):
-
-		# Variable to store sum of subarrays
-		Sum = 0
-
-		for j in range(i,N):
-
-			# Storing sum of subarrays
-			Sum += arr[j]
-
-			# if Sum equals K
-			if (Sum == K):
-
-				# Update maxLength
-				maxlength = max(maxlength, j - i + 1)
-
-	# Return the maximum length
-	return maxlength
-
-# Driver Code
-# Given input
-arr = [ 10, 5, 2, 7, 1, 9 ,0,0,0,0,0,0,0,15]
-n = len(arr)
-k = 15
-
-# Function Call
-print("Length = " , lenOfLongSubarr(arr, n, k))
+# def lenOfLongSubarr(arr, N, K):
+#
+# 	maxlength = 0
+#
+# 	for i in range(0,N):
+#
+# 		# Variable to store sum of subarrays
+# 		Sum = 0
+#
+# 		for j in range(i,N):
+#
+# 			# Storing sum of subarrays
+# 			Sum += arr[j]
+#
+# 			# if Sum equals K
+# 			if (Sum == K):
+#
+# 				# Update maxLength
+# 				maxlength = max(maxlength, j - i + 1)
+#
+# 	# Return the maximum length
+# 	return maxlength
+#
+# # Driver Code
+# # Given input
+# arr = [ 10, 5, 2, 7, 1, 9 ,0,0,0,0,0,0,0,15]
+# n = len(arr)
+# k = 15
+#
+# # Function Call
+# print("Length = " , lenOfLongSubarr(arr, n, k))
 
 ####################################################
+
+#if u find the array 0 in double array than make row and coloum 0 thats it...
+
+# explaination :
+# arr=[[1,0,1],[2,4,5],[3,6,9]] ---> input
+# arr=[[0,0,0],[2,0,5],[3,0,9]-->output
+# arr=[[1,0,1],[2,7,5],[3,6,9]]
+# dics={}
+# for i in range(len(arr)):
+#     for j in range(len(arr[i])):
+#         if arr[i][j]==0:
+#             dics[i]=j
+#
+# for i in dics.items():
+#     print(i)
+#     for j in range(len((arr[i[0]]))):
+#         arr[i[0]][j]=0
+#     for p in range(len(arr)):
+#         arr[p][i[1]]=0
+# print(arr)
+########################################################
+
+
+
+
+
+
+
+
 
 
 
