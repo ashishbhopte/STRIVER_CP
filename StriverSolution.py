@@ -984,7 +984,7 @@
 
 ####################################################
 
-#if u find the array 0 in double array than make row and coloum 0 thats it...
+#if u find the array 0 in doubly array than make row and coloum 0 thats it...
 
 # explaination :
 # arr=[[1,0,1],[2,4,5],[3,6,9]] ---> input
