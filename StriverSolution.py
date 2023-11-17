@@ -1005,17 +1005,73 @@
 # print(arr)
 ########################################################
 
+####1st variant: Return YES if there exist two numbers such that their sum is equal to the target. Otherwise, return NO.
 
+##2nd variant: Return indices of the two numbers such that their sum is equal to the target. Otherwise, we will return {-1, -1}.
 
+##Note: You are not allowed to use the same element twice. Example: If the target is equal to 6 and num[1] = 3,
+## then nums[1] + nums[1] = target is not a solution.
+#O(N^2)
+# arr=[1,4,5,6,9,20,3]
+# T=23
+# u=0
+# for i in range(len(arr)):
+#     for j in range(i+1,len(arr)):
+#         if T== arr[i]+arr[j]:
+#             print("Yes")
+#             u=1
+#             print('index of the elements:',i,j)
+#             break
+# if u!=1:
+#     print("No")
 
+# optomized wa:y:o(N)---> here basically we are using the dictonary concept
 
+# dict={}
+# T=9
+# arr=[2,3,5,0,5,8,6]
+# for i in range(len(arr)):
+#     if dict.get(T-arr[i])!=None:
+#         print(i,dict.get(T-arr[i]))
+#     else:
+#         dict[arr[i]]=i
 
+############################################
+##Sort an array of 0s, 1s and 2s
+# many ways to short this array:
+#   1 ST WAY :::  Brutforce 2*2 loop-->O(N^2)
+# 2ND WAY :::  O(n)--> COUNT HOW MANY 0S , 1S AND 2S and than create a array like that
+## 3RD WAY :::  DUTCH NATIONAL FLAG ALGO:: 0s 1s unshorted 2s
 
-
-
-
-
-
+# def sort012(arr, n):
+# 	# Initialisation
+# 	l = 0
+# 	r = n - 1
+# 	i = 0
+# 	while i < n and i <= r:
+# 		# current element is 0
+# 		if arr[i] == 0:
+# 			arr[l], arr[i] = arr[i], arr[l]
+# 			l += 1
+# 			i += 1
+# 		# current element is 2
+# 		elif arr[i] == 2:
+# 			arr[i], arr[r] = arr[r], arr[i]
+# 			r -= 1
+# 		# current element is 1
+# 		else:
+# 			i += 1
+# def printArray(arr, arr_size):
+# 	# Iterate and print every element
+# 	for i in range(arr_size):
+# 		print(arr[i], end=" ")
+# # Driver Code
+# if __name__ == "__main__":
+# 	arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+# 	n = len(arr)
+#     sort012(arr, n)
+# 	printArray(arr, n)
+########################################
 
 
 
