@@ -1073,6 +1073,7 @@
 # 	printArray(arr, n)
 ########################################
 ##Find the Majority Element that occurs more than N/2 times:::
+# Following algo takes etra map space:
 
 # arr=[1,2,2,1,1,0,2,2,2]
 # dict={}
@@ -1087,6 +1088,21 @@
 #     if i>m:
 #         m=i
 # print(m)
+
+## Better approach: with only 2 variable:-
+
+arr = [1, 2, 2, 1, 1, 0, 2, 2, 2]
+count=0
+hold=arr[0]
+for i in range(len(arr)):
+    if count==0:
+        hold=arr[i]
+    elif arr[i] == hold:
+        count+=1
+    else:
+        count-=1
+print(hold)
+
 ###############################################
 
 
