@@ -1072,6 +1072,26 @@
 #     sort012(arr, n)
 # 	printArray(arr, n)
 ########################################
+##Find the Majority Element that occurs more than N/2 times:::
+
+# arr=[1,2,2,1,1,0,2,2,2]
+# dict={}
+# for i in arr:
+#     if dict.get(i)==None:
+#         dict[i]=1
+#     else:
+#         dict[i]+=1
+# m=0
+# for i in dict:
+#     print(dict[i])
+#     if i>m:
+#         m=i
+# print(m)
+###############################################
+
+
+
+
 
 
 
