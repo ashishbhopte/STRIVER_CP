@@ -1091,19 +1091,58 @@
 
 ## Better approach: with only 2 variable:-
 
-arr = [1, 2, 2, 1, 1, 0, 2, 2, 2]
-count=0
-hold=arr[0]
-for i in range(len(arr)):
-    if count==0:
-        hold=arr[i]
-    elif arr[i] == hold:
-        count+=1
-    else:
-        count-=1
-print(hold)
+# arr = [1, 2, 2, 1, 1, 0, 2, 2, 2]
+# count=0
+# hold=arr[0]
+# for i in range(len(arr)):
+#     if count==0:
+#         hold=arr[i]
+#     elif arr[i] == hold:
+#         count+=1
+#     else:
+#         count-=1
+# print(hold)
 
 ###############################################
+
+
+##Kadane’s Algorithm : Maximum Subarray Sum in an Array
+# ###Brutforce wAY : o(n^2)
+# import sys
+# maxx = -sys.maxsize - 1 # min integer possible value in python
+#
+# arr=[-2,-3,4,-1,-2,1,5,-3]
+# for i in range(len(arr)):
+#     sum=0
+#     for j in range(i,len(arr)):
+#         sum+=arr[k]
+#         maxx=max(maxx,sum)
+#         print(maxx)
+
+#####################################################
+###Kadane’s Algorithm: O(N)
+
+# import sys
+# arr=[-2,-3,4,-1,-2,1,5,-3]
+# maxi = -sys.maxsize - 1 # min integer possible value in python
+# sum=0
+# for i in range(len(arr)):
+#
+#     if sum==0:
+#         start=0
+#     sum=sum+arr[i]
+#
+#     if sum > maxi:
+#         maxi=sum
+#         ans_start=start
+#         ans_end=i
+#     if sum < 0:
+#         sum=0
+# print(maxi)
+
+####################################################
+
+
 
 
 
