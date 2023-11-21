@@ -1141,6 +1141,20 @@
 # print(maxi)
 
 ####################################################
+### Problem Statement: You are given an array of prices where prices[i] is the price of a given stock on an ith day.
+## You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the
+# ##future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+# prices=[7,1,5,3,6,4]
+# mini=min(prices)
+# maxx=0
+#
+# for i in range(prices.index(mini), len(prices)):
+#
+#     if prices[i]>maxx:
+#         maxx=prices[i]
+# print(maxx-mini)
+##########################################################
 
 
 
