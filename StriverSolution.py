@@ -1141,11 +1141,13 @@
 # print(maxi)
 
 ####################################################
+
+                                 ##### DP On Stocks   ######
 ### Problem Statement: You are given an array of prices where prices[i] is the price of a given stock on an ith day.
 ## You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the
 # ##future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
-# prices=[7,1,5,3,6,4]
+# prices=[7,4,5,3,6,1]
 # mini=min(prices)
 # maxx=0
 #
@@ -1154,7 +1156,66 @@
 #     if prices[i]>maxx:
 #         maxx=prices[i]
 # print(maxx-mini)
-##########################################################
+
+## This above is the wrong approach because if min value present at the end solution will give wrong op
+######
+
+# prices=[7,4,5,3,6,1]
+# mini=prices[0]# here i m taking 1st ele as a min
+# profit=0; # intially profit is 0
+# for i in range(1,len(prices)):# looping from 1 because 0 is already taken minimum
+#     cost=prices[i]-mini
+#     profit=max(profit,cost)
+#     mini=min(mini,prices[i])
+# print(profit)
+
+#################################################################################
+###Rearrange Array by sign :
+##### There’s an array ‘A’ of size ‘N’ with an equal number of positive and negative elements.
+# Without altering the relative order of positive and negative elements, you must return an array of alternately positive and negative values.
+# TC: logn
+# SC: logn
+# arr=[1,2,3,4,5,-6,-7,-8,-9,-1]
+# t=[]
+# for i in range(len(arr)//2):
+#     t.append(arr[i])
+#
+# for i in range(len(t)):
+#     j=len(arr)//2 +  i
+#     arr[i*2]=t[i]
+#     arr[i*2+1]=arr[j]
+# print(arr)
+
+####But wait if no of possitive and negative element will not be same than :
+###Than 2 possiblity will be there neg>pos or poss>neg
+# 
+# arr=[1,-5,3,-4,5,-6,-7,-8,-9,-1,-5,0]
+# # arr=[1,2,3,4,5,6,7,-3,-5,-6] # testing arr for possitive value
+# #1stly will segrigate it :
+# P=[]
+# N=[]
+# for i in arr:
+#   if i >=0:
+#       P.append(i)
+#   else:
+#       N.append(i)
+# print(P,N)
+# if len(P)<len(N):
+#     for i in range(len(P)):
+#         arr[i*2]=P[i]
+#         arr[i*2+1]=N[i]
+#     for k in range(len(N)-len(P)):
+#         arr[len(P)*2+k]=N[len(P)+k]
+# else:
+#     for i in range(len(N)):
+#         arr[i*2]=P[i]
+#         arr[i*2+1]=N[i]
+#     for k in range(len(P)-len(N)):
+#         arr[len(N)*2+k]=P[len(N)+k]
+# print(arr)
+
+##################################################################################
+
 
 
 
