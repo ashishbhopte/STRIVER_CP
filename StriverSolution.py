@@ -1188,7 +1188,7 @@
 
 ####But wait if no of possitive and negative element will not be same than :
 ###Than 2 possiblity will be there neg>pos or poss>neg
-# 
+#
 # arr=[1,-5,3,-4,5,-6,-7,-8,-9,-1,-5,0]
 # # arr=[1,2,3,4,5,6,7,-3,-5,-6] # testing arr for possitive value
 # #1stly will segrigate it :
@@ -1216,7 +1216,38 @@
 
 ##################################################################################
 
+# Python3 program to print all permutations with
+# duplicates allowed
+# def toString(List):
+# 	return ''.join(List)
+#
+# # Function to print permutations of string
+# # This function takes three parameters:
+# # 1. String
+# # 2. Starting index of the string
+# # 3. Ending index of the string.
+#
+#
+# def permute(a, l, r):
+# 	if l == r:
+# 		print(toString(a))
+# 	else:
+# 		for i in range(l, r):
+# 			a[l], a[i] = a[i], a[l]
+# 			permute(a, l+1, r)
+# 			a[l], a[i] = a[i], a[l] # backtrack
+#
+# # Driver code
+# string = "ABC" #we are giving string value here,ydi newmerical dete bhi to use convert ker do type cast karke
+# n = len(string)
+# a = list(string)
+#
+# # Function call
+# permute(a, 0, n)
 
+# This code is contributed by Bhavya Jain
+
+###############################################################################
 
 
 
