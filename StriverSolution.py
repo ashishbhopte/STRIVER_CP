@@ -1308,14 +1308,16 @@
 # Leaders in an Array Problem Statement: Given an array, print all the elements which are leaders--
 #-- A Leader is an element that is greater than all of the elements on its right side in the array.
 
-arr = [10, 22, 12, 3, 0, 6]
-n=len(arr)-1
-p=arr[n]
-print(p,end=' ')
-for i in range(n,0,-1):
-    if p<arr[i]:
-        p=arr[i]
-        print(arr[i],end=' ')
+# arr = [10, 22, 12, 3, 0, 6]
+# n=len(arr)-1
+# p=arr[n]
+# print(p,end=' ')
+# for i in range(n,0,-1):
+#     if p<arr[i]:
+#         p=arr[i]
+#         print(arr[i],end=' ')
+####################################################
+# find the subarray of maxx sum ::
 
 
 
