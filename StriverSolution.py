@@ -1,3 +1,22 @@
+
+## how does python program run:
+# def name(): #3rd
+#     print("This is name")
+#     return "ashish"
+# def main(): # 2nd
+#     print(name())
+# if __name__ == "__main__": # 1st
+#     main()
+
+# def name(): #3rd
+#     print("This is name")
+#     return "ashish"
+# def main(): # 2nd
+#     t=name()
+#     print(f"This is {t}")
+# if __name__ == "__main__": # 1st
+#     main()
+
 # 5 X 5 squire
 # * * * * *
 # * * * * *
@@ -1317,11 +1336,26 @@
 #         p=arr[i]
 #         print(arr[i],end=' ')
 ############################################################
+# all zero's at the end
+
+
+arr=[2,0,3,0,45,8,0,5,0,9]
+t=len(arr)
+i=0
+j=t-1
+print(j)
+while i<j:
+    if arr[i] ==0 and arr[j] != 0:
+        arr[i],arr[j]=arr[j],arr[i]
+    elif arr[i] ==0 and arr[j]==0:
+        j+=1
+    elif arr[i] !=0 and arr[j] ==0 :
+        j+=1
+    else:
+        i+=1
+print(arr)
+
 ######################### FROM HERE STRIVER A2Z SHEET WILL FOLLOW ####################
-
-
-
-
 
 
 
