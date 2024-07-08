@@ -1336,26 +1336,165 @@
 #         p=arr[i]
 #         print(arr[i],end=' ')
 ############################################################
-# all zero's at the end
-
-
-arr=[2,0,3,0,45,8,0,5,0,9]
-t=len(arr)
-i=0
-j=t-1
-print(j)
-while i<j:
-    if arr[i] ==0 and arr[j] != 0:
-        arr[i],arr[j]=arr[j],arr[i]
-    elif arr[i] ==0 and arr[j]==0:
-        j+=1
-    elif arr[i] !=0 and arr[j] ==0 :
-        j+=1
-    else:
-        i+=1
-print(arr)
+## all zero's at the end
+# arr=[2,0,3,0,45,8,0,5,0,9]
+# t=len(arr)
+# i=0
+# j=t-1
+# print(j)
+# while i<j:
+#     if arr[i] ==0 and arr[j] != 0:
+#         arr[i],arr[j]=arr[j],arr[i]
+#     elif arr[i] ==0 and arr[j]==0:
+#         j-=1
+#     elif arr[i] !=0 and arr[j] ==0 :
+#         j-=1
+#     else:
+#         i+=1
+# print(arr)
 
 ######################### FROM HERE STRIVER A2Z SHEET WILL FOLLOW ####################
+#
+# Arr[] = {1,3,2}
+# Output
+# : Arr[] = {2,1,3}
+# Explanation:
+# All permutations of {1,2,3} are {{1,2,3} , {1,3,2}, {2,13} , {2,3,1} , {3,1,2} , {3,2,1}}. So, the next permutation just after {1,3,2} is {2,1,3}.
+# def next_permutation(nums):
+#     # Find the first element from the right that is not in decreasing order
+#     i = len(nums) - 2  # here 2 because last element bachega bhi fir bhi comparission possible nhi hai.
+#     while i >= 0 and nums[i] >= nums[i + 1]:
+#         i -= 1
+#     # If such an element is found, find the smallest element from the right that is greater than it
+#     if i >= 0:
+#         j = len(nums) - 1
+#         while nums[j] <= nums[i]:
+#             j -= 1
+#         # ydi second portion me jo bhi smallest hai usse tum replace ker do.
+#         nums[i], nums[j] = nums[j], nums[i]
+#     # Reverse the elements from i+1 to the end to get the next permutation
+#     nums[i + 1:] = reversed(nums[i + 1:])
+#
+# nums = [2,1,5,4,3,0,0]
+# next_permutation(nums)
+# print(nums)
+#
+####################################################################
+
+##Problem Statement: Given a matrix, your task is to rotate the matrix 90 degrees clockwise.
+
+#
+# N = 4
+# # Function to rotate the matrix 90 degree clockwise
+# def rotate(arr):
+# 	global N
+# 	# First rotation
+# # with respect to main diagonal, just a row to column changes---> Transform the matrix.
+# 	for i in range(N):
+# 		for j in range(i):
+# 			temp = arr[i][j]
+# 			arr[i][j] = arr[j][i]
+# 			arr[j][i] = temp
+# 	print(arr)
+# 	# Second rotation
+# # with respect to middle column
+# 	for i in range(N):
+# 		for j in range(int(N/2)):
+# 			temp = arr[i][j]
+# 			arr[i][j] = arr[i][N-j-1]
+# 			arr[i][N-j-1] = temp
+#
+#
+#
+# # Driver code
+# arr = [[1, 2, 3, 4],
+# 	[5, 6, 7, 8],
+# 	[9, 10, 11, 12],
+# 	[13, 14, 15, 16]]
+#
+# print('Before rotation:',arr)
+#
+# rotate(arr)
+#
+# for i in range(N):
+# 	for j in range(N):
+# 		print(arr[i][j], end=" ")
+# 	print()
 
 
+#######################################################################
+# ##  just a q find all the combination of given target
+#
+# target=10
+# l=[2,3,8,10,18,7,9,15]
+# def check(l):
+#     for i in l:
+#         print("this is i",i)
+#         k=target-i
+#         if k in l:
+#             return[k,i]
+#         for j in l:
+#             if i!=j:
+#                 f=k-j;
+#                 print("this is j and f",j,f)
+#                 if f in l and f!=j and f!=i:
+#                     return[i,j,f]
+#
+# print(check(l))
+#####################################################
+#
+# def printSpiral(mat):
+# 	# Define ans array to store the result.
+# 	ans = []
+#
+# 	n = len(mat)  # no. of rows
+# 	m = len(mat[0])  # no. of columns
+#
+# 	# Initialize the pointers reqd for traversal.
+# 	top = 0
+# 	left = 0
+# 	bottom = n - 1
+# 	right = m - 1
+#
+# 	# Loop until all elements are not traversed.
+# 	while (top <= bottom and left <= right):
+# 		# For moving left to right
+# 		for i in range(left, right + 1):
+# 			ans.append(mat[top][i])
+#
+# 		top += 1
+#
+# 		# For moving top to bottom.
+# 		for i in range(top, bottom + 1):
+# 			ans.append(mat[i][right])
+#
+# 		right -= 1
+#
+# 		# For moving right to left.
+# 		if (top <= bottom):
+# 			for i in range(right, left - 1, -1):
+# 				ans.append(mat[bottom][i])
+#
+# 			bottom -= 1
+#
+# 		# For moving bottom to top.
+# 		if (left <= right):
+# 			for i in range(bottom, top - 1, -1):
+# 				ans.append(mat[i][left])
+#
+# 			left += 1
+#
+# 	return ans
+#
+#
+# # Matrix initialization.
+# mat = [[1, 2, 3, 4],
+# 	   [5, 6, 7, 8],
+# 	   [9, 10, 11, 12],
+# 	   [13, 14, 15, 16]]
+#
+# ans = printSpiral(mat)
+#
+# print(ans)
+#
 
