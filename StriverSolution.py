@@ -1566,4 +1566,40 @@
 # result = find_most_repeated_char(input_string)
 # print(f"The most repeated character is '{result[0]}' with {result[1]} occurrences.")
 
+####### #######################    ###########List Comprehention question##################################### ######
+# l=[1,2,3,4,5,6,7,8,9,10]
+# l=[i*i for i in l]
+# print(l)
+
+# s='Hello World1'
+# l=[i for i in s if i.isupper()]
+# print(l)
+ ####QQQQ
+# Write a list comprehension that creates a list of the lengths of words in the list ["apple", "banana", "cherry"].
+# Example Input: ["apple", "banana", "cherry"]
+# Expected Output: [5, 6, 6]
+# l=['apple','banana','cherry']
+# l=[len([j for j in i]) for i in l ]
+# print(l)
+########################################
+# QQ
+# Write a list comprehension that returns a list of palindromes from a list of words.
+# Example Input: ["madam", "hello", "racecar", "world"]
+# Expected Output: ["madam", "racecar"]
+
+# l= ["madam", "hello", "racecar", "world"]
+# l=[i for i in l if i==i[::-1]]
+# print(l)
+####################################
+# QQ
+# Given a list of tuples, write a list comprehension that flattens the list into a single list of elements.
+# Example Input: [(1, 2), (3, 4), (5, 6)]
+# Expected Output: [1, 2, 3, 4, 5, 6]
+# l= [(1, 2), (3, 4), (5, 6)]
+# l=[j for i in l for j in i]
+# print(l)
+
+
+
+
 
