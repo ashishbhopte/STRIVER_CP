@@ -1,4 +1,10 @@
 
+
+##
+## From here I will have DSA topics:
+#
+#
+#
 ## how does python program run:
 # def name(): #3rd
 #     print("This is name")
@@ -1496,5 +1502,68 @@
 # ans = printSpiral(mat)
 #
 # print(ans)
+
+# ###WAP to reverse the string only and only using loop:
+# s="TEDEWS"
+# y=''
+# for char in s:
+#     y=char+y
+# print(y)
+
+# ##### WAP for swapping in possible way
+# a=20
+# b=10
+# print('Before swaping a,b:',a,b)
+# # a,b=b,a
+# # c=a
+# # a=b
+# # b=c
+# # a=a+b #30
+# # b=a-b # 20
+# # a=a-b #10
+# print('After swapping a,b:',a,b)
+
+
+# # find the maxx repepeatative character in given string ?
 #
+# s = 'gtbbebwbrbwebkb'
+# ls = len(s)
+# g1 = 1
+# g2 = 0
+# character = ''
+# for i in range(ls):
+#     g1 = 1
+#     for j in range(i + 1, ls):
+#         if s[i] == s[j]:
+#             g1 += 1
+#     if g1 > g2:
+#         g2 = g1
+#         character = s[j]
+#
+# print(s[j], g2)
+# but with above approach time complexity increases so in O(n)
+# def find_most_repeated_char(s: str):
+#     frequency = {}
+#     for char in s:
+#         if char in frequency:
+#             frequency[char] += 1 # with this way we are adding +1 to that char
+#         else:
+#             frequency[char] = 1 # we are simply adding that char with 1 value.
+#
+#     max_char = ''
+#     max_count = 0
+#
+#     for char, count in frequency.items():
+#         if count > max_count:
+#             max_count = count
+#             max_char = char
+#
+#     return max_char, max_count
+#
+#
+# # Example usage
+# input_string = "abccbaaa"
+# result = find_most_repeated_char(input_string)
+# print(f"The most repeated character is '{result[0]}' with {result[1]} occurrences.")
+
 
