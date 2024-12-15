@@ -1598,8 +1598,28 @@
 # l= [(1, 2), (3, 4), (5, 6)]
 # l=[j for i in l for j in i]
 # print(l)
+# Write a list comprehension that converts a list of strings into a list of uppercase strings.
+# Example Input: ["hello", "world", "python"]
+# Expected Output: ["HELLO", "WORLD", "PYTHON"]
 
+# l=["hello", "world", "python"]
+# l1=[i.upper() for i in l]
+# print(l1)
+##############################
+# Write a list comprehension to find all numbers in a given list that are greater than 10.
+# Example Input: [4, 15, 7, 20, 9, 11, 30]
+# Expected Output: [15, 20, 11, 30]
 
+# l=[4, 15, 7, 20, 9, 11, 30]
+# print([i for i in l if i>10])
+################################
+# Write a list comprehension to find the sum of digits for each number in a given list of integers.
+# Example Input: [123, 456, 789]
+# Expected Output: [6, 15, 24]
+# (For 123, the sum of digits is 1 + 2 + 3 = 6)
 
-
+# l = [123, 456, 789]
+# output_list = [sum(int(j) for j in str(i)) for i in l]
+# print(output_list)
+##Note: sum(iterable,starting value)-->in sum() func starting value is optional.
 
